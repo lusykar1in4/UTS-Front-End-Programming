@@ -152,101 +152,15 @@ section.home {
   background: #02636e;
 }
 
-.home .home-box .content {
-  width: 100%;
-  height: calc(100% - 65px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  transform: translate(0, -65px);
-}
-
-.home .home-box .content h5 {
-  text-transform: uppercase;
-  color: var(--white-color);
-  font-size: .9rem;
-  font-weight: 400;
-  margin-bottom: 2rem;
-}
-
-.home .home-box .content h1 {
-  font-size: 4rem;
-  max-width: 50rem;
-  color: var(--white-color);
-  text-align: center;
-  font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.home .home-box .content p {
-  color: #eee;
-  font-weight: 300;
-  max-width: 40rem;
-  font-size: 1.1rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.home .home-box .content .search {
-  width: 100%;
-  max-width: 38rem;
-  height: 45px;
-  background: var(--white-color);
-  border-radius: 3rem;
-  display: flex;
-  align-items: center;
-  padding: .3rem;
-}
-
-.home .home-box .content .search i {
-  color: rgba(0,0,0,.5);
-  margin: 0 .6rem;
-}
-
-.home .home-box .content .search input {
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-weight: 400;
-}
-
-.home .home-box .content .search button {
-  height: 100%;
-  padding: 0 1rem;
-  border-radius: inherit;
-  background: var(--green-color);
-  border: none;
-  outline: none;
-  color: var(--white-color);
-  font-weight: 400;
-  cursor: pointer;
-}
-
-.home .home-box .content .search button:hover {
-  background: #02636e;
-}
-
-.home .home-box .content h5, .home .home-box .content h1, .home .home-box .content p, .home .home-box .content .search {
-  transform: translate(0, 100px);
-  opacity: 0;
-}
-
 .home .home-box .slider{
   width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
   margin-top: -68px;
+  border-radius: 6px;
 }
 /* SLIDER */
-/* .slider_container{
-  width: 1920px;
-  height: 1280px;
-} */
 .home .home-box .slider .list .item {
   position: absolute;
   inset: 0 0 0 0;
