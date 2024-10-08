@@ -94,7 +94,7 @@ function galleryAnimation(triggerSelector, boxSelectors) {
 
 animateContent([".home .content h5, .home .content h1, .home .content p, .home .content .search"]);
 
-scrollTirggerAnimation(".feedback .container", [".feedback .label", ".feedback .heading", ".feedback .paragraph"]);
+scrollTirggerAnimation(".gem .container", [".gem .label", ".gem .heading", ".gem .paragraph"]);
 
 scrollTirggerAnimation(".article", [".article .label", ".article .heading"]);
 
@@ -106,5 +106,5 @@ galleryAnimation(".destinations .gallery", [".destinations .gallery .box1",".des
 
 galleryAnimation(".featured .gallery", [".featured .gallery .box2",".featured .gallery .box3",".featured .gallery .box4"])
 
-galleryAnimation(".feedback .voices", [".feedback .voices .box1",".feedback .voices .box2",".feedback .voices .box3",".feedback .voices .box4",".feedback .voices .box5",".feedback .voices .box6"])
+galleryAnimation(".gem .voices", [".gem .voices .box1",".gem .voices .box2",".gem .voices .box3",".gem .voices .box4",".gem .voices .box5",".gem .voices .box6"])
 

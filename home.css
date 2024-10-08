@@ -415,8 +415,8 @@ section.home {
 }
 /* featured section ends here  */
 
-/* feedback section starts here  */
-.feedback {
+/* gem section starts here  */
+.gem {
     background: url("home-images/section-background.jpg");
     background-position: center;
     background-size: cover;
@@ -425,30 +425,30 @@ section.home {
     padding-bottom: 5rem;
 }
 
-.feedback .container {
+.gem .container {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.feedback .container h4 {
+.gem .container h4 {
     color: rgb(255 255 255/90%);
 }
 
-.feedback .container h2 {
+.gem .container h2 {
     max-width: 40rem;
     color: var(--white-color);
     text-align: center;
 }
 
-.feedback .container p {
+.gem .container p {
     color: #eee;
     font-size: 1.2rem;
     margin-top: 1rem;
     text-align: center;
 }
 
-.feedback .voices {
+.gem .voices {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -456,19 +456,19 @@ section.home {
     margin-top: 3rem;
 }
 
-.feedback .voices .voice {
+.gem .voices .voice {
     flex: 1 0 320px;
     background: var(--white-color);
     padding: 2rem;
     border-radius: .7rem;
 }
 
-.feedback .voices .voice .profile {
+.gem .voices .voice .profile {
     display: flex;
     align-items: center;
 }
 
-.feedback .voices .voice .profile img {
+.gem .voices .voice .profile img {
     width: 40px;
     height: 40px;
     object-fit: cover;
@@ -476,36 +476,36 @@ section.home {
     border-radius: 2rem;
 }
 
-.feedback .voices .voice .profile .detail {
+.gem .voices .voice .profile .detail {
     margin-left: 1rem;
 }
 
-.feedback .voices .voice .profile .detail li {
+.gem .voices .voice .profile .detail li {
     list-style: none;
 }
 
-.feedback .voices .voice .profile .detail li:first-child {
+.gem .voices .voice .profile .detail li:first-child {
     font-size: 1.1rem;
     color: #000;
     font-weight: 600;
 }
 
-.feedback .voices .voice p {
+.gem .voices .voice p {
     margin-top: 1rem;
 }
 
-.feedback .container .label,
-.feedback .container .heading,
-.feedback .container .paragraph {
+.gem .container .label,
+.gem .container .heading,
+.gem .container .paragraph {
     transform: translate(0, 10px);
     opacity: 0;
 }
 
-.feedback .voices .voice {
+.gem .voices .voice {
     transform: translate(0, 100px);
     opacity: 0;
 }
-/* feedback section ends here  */
+/* gem section ends here  */
 
 /* article section starts here  */
 
@@ -820,7 +820,7 @@ footer .footer .copyright a {
         font-size: .8rem;
     }
 
-    .feedback .container p {
+    .gem .container p {
         font-size: .9rem;
     }
 }
