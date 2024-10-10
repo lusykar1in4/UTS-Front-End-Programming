@@ -275,6 +275,7 @@ nav ul li a.active {
 
 .recommendations li:hover {
     background-color: #f1f1f1;
+    border-radius: 20px;
 }
 
 .recommendations li:last-child {
