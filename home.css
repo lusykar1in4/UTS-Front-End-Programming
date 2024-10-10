@@ -95,7 +95,7 @@ section.home {
     z-index: 100;
     position: fixed;
     right: 4.8px;
-    /* top: 0; */
+    top: 2px;
 }
 
 nav ul li a.active {
@@ -822,6 +822,11 @@ footer .footer .copyright a {
     .heading {
         font-size: 2rem;
     }
+
+    .home .home-box nav {
+        right: 3.5px;
+    }
+
     .home .home-box nav .menu {
         display: none;
     }
@@ -895,6 +900,10 @@ footer .footer .copyright a {
 }
 
 @media (max-width: 607px) {
+    .home .home-box nav {
+        right: 2.8px;
+    }
+
     .home .home-box .content h1 {
         font-size: 2rem;
     }
@@ -905,6 +914,10 @@ footer .footer .copyright a {
 }
 
 @media (max-width: 457px) {
+    .home .home-box nav {
+        right: 2.2px;
+    }
+
     .article .container .latest-article,
     .article .container .more-article {
         width: 100%;
