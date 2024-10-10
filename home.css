@@ -525,7 +525,7 @@ nav ul li a.active {
 /* article section starts here  */
 
 .article {
-    padding-top: 3rem;
+    padding-top: 6rem;
     padding-bottom: 3rem;
     margin-top: 5rem;
 }
@@ -561,20 +561,24 @@ nav ul li a.active {
     font-weight: 600;
 }
 
-.article .container .latest-article .author {
-    display: flex;
-    align-items: center;
-    gap: .7rem;
+.latest-article a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.article .container .latest-article .author img {
-    width: 30px;
-    height: 30px;
-    border-radius: 3rem;
+.latest-article h3 a:hover {
+    text-decoration: underline;
+    color: #007BFF; 
 }
 
-.article .container .latest-article .author p {
-    font-size: .9rem;
+.more-article a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.more-article h3 a:hover {
+    text-decoration: underline;
+    color: #007BFF; 
 }
 
 .article .container .more-article {
