@@ -341,6 +341,15 @@ nav ul li a.active {
     font-weight: 500;
 }
 
+.gallery a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.gallery a:hover {
+    opacity: 0.9;
+}
+
 .destinations .container .container-box .heading,
 .destinations .container .container-box .content {
     transform: translate(-200px);
@@ -462,6 +471,16 @@ nav ul li a.active {
     flex-wrap: wrap;
     gap: 1rem;
     margin-top: 3rem;
+}
+
+.voices a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.voices h2 a:hover {
+    text-decoration: underline;
+    color: #d3e5fa;
 }
 
 .gem .voices .voice {
