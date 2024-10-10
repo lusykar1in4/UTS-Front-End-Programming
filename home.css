@@ -51,14 +51,30 @@ section {
 
 section.home {
     padding: 1rem;
+    overflow: hidden;
+    padding: 0;
     width: 100%;
     height: 100vh;
 }
 
+.video-background {
+    position: absolute; /* Posisi absolute untuk memenuhi seluruh section */
+    top: 50%; /* Tempatkan di tengah vertikal */
+    left: 50%; /* Tempatkan di tengah horizontal */
+    width: 100%; /* Lebar video 100% */
+    height: 100%; /* Tinggi video 100% */
+    object-fit: cover; /* Pastikan video menutupi seluruh area */
+    transform: translate(-50%, -50%); /* Pusatkan video */
+    z-index: -1; /* Tempatkan video di belakang konten */
+}
+
 .home .home-box {
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url("home-images/home-background.jpg");
+    background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -67,7 +83,7 @@ section.home {
 }
 
 .home .home-box nav {
-    width: 100%;
+    width: 99%;
     height: 65px;
     background: linear-gradient(rgb(255,255,255,.2),rgb(255,255,255,.2));
     backdrop-filter: blur(1px);
@@ -76,8 +92,14 @@ section.home {
     justify-content: space-between;
     align-items: center;
     padding: 0 4rem;
-    z-index: 10;
-    position: relative;
+    z-index: 100;
+    position: fixed;
+    /* top: 0; */
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid #ffffff; /* Garis bawah berwarna putih */
+    color: #ffffff; /* Warna teks putih */
 }
 
 .home .home-box nav .logo {
@@ -100,6 +122,7 @@ section.home {
 .home .home-box nav .logo h3 {
     color: var(--white-color);
     font-weight: 400;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
 }
 
 .home .home-box nav .menu .close {
@@ -110,6 +133,7 @@ section.home {
     display: flex;
     gap: 3rem;
     list-style: none;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
 }
 
 .home .home-box nav .menu ul li a {
@@ -156,6 +180,8 @@ section.home {
     align-items: center;
     flex-direction: column;
     transform: translate(0, -65px);
+    color: #ffffff;
+    margin-top: 5.2%;
 }
 
 .home .home-box .content h5 {
@@ -306,6 +332,7 @@ section.home {
     padding: 1.5rem 2rem;
     left: 0;
     z-index: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
 }
 
 .gallery .box .text h2 {
@@ -380,33 +407,13 @@ section.home {
 .featured .gallery .box .content h2 {
     font-weight: 500;
     color: var(--white-color);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
 }
 
 .featured .gallery .box .content p {
     font-size: .9rem;
     color: #eee;
-}
-
-.featured .gallery .box .content .review-and-idr {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.featured .gallery .box .content .review-and-idr .review {
-    font-size: .9rem;
-    color: #eee;
-}
-
-.featured .gallery .box .content .review-and-idr .review i {
-    color: #ffa600;
-}
-
-.featured .gallery .box .content .review-and-idr p {
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: var(--white-color);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
 }
 
 .featured .gallery .box {
@@ -415,7 +422,7 @@ section.home {
 }
 /* featured section ends here  */
 
-/* gem section starts here  */
+/* hidden gem section starts here  */
 .gem {
     background: url("home-images/section-background.jpg");
     background-position: center;
@@ -461,48 +468,55 @@ section.home {
     background: var(--white-color);
     padding: 2rem;
     border-radius: .7rem;
-}
-
-.gem .voices .voice .profile {
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 1.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
+    transform: translate(0, 100px);
+    opacity: 0;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 250px;
 }
 
-.gem .voices .voice .profile img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 2rem;
+.gem .voices .voice.box1 {
+    background-image: url('home-images/pulo.jpeg');
 }
 
-.gem .voices .voice .profile .detail {
-    margin-left: 1rem;
+.gem .voices .voice.box2 {
+    background-image: url('home-images/argapura.jpg');
 }
 
-.gem .voices .voice .profile .detail li {
+.gem .voices .voice.box3 {
+    background-image: url('home-images/pangaduan.jpg');
+}
+
+.gem .voices .voice.box4 {
+    background-image: url('home-images/sembilan.jpg');
+}
+
+.gem .voices .voice.box5 {
+    background-image: url('home-images/labuan.jpg');
+}
+
+.gem .voices .voice.box6 {
+    background-image: url('home-images/kelimutu.jpg');
+}
+
+.gem .voices .voice .detail {
     list-style: none;
-}
-
-.gem .voices .voice .profile .detail li:first-child {
-    font-size: 1.1rem;
-    color: #000;
-    font-weight: 600;
-}
-
-.gem .voices .voice p {
-    margin-top: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    bottom: 0;
+    margin-top: auto;
+    font-size: 12px;
 }
 
 .gem .container .label,
 .gem .container .heading,
 .gem .container .paragraph {
     transform: translate(0, 10px);
-    opacity: 0;
-}
-
-.gem .voices .voice {
-    transform: translate(0, 100px);
     opacity: 0;
 }
 /* gem section ends here  */

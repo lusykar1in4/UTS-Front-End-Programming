@@ -108,3 +108,46 @@ galleryAnimation(".featured .gallery", [".featured .gallery .box2",".featured .g
 
 galleryAnimation(".gem .voices", [".gem .voices .box1",".gem .voices .box2",".gem .voices .box3",".gem .voices .box4",".gem .voices .box5",".gem .voices .box6"])
 
+
+const blurHeader = () => {
+    const header = document.getElementById("header");
+    const scrollValue = window.scrollY;
+  
+    if (scrollValue >= 90) {
+      const blurValue = Math.min(scrollValue / 10, 30);
+      header.style.backdropFilter = `blur(${blurValue}px)`;
+      header.style.webkitBackdropFilter = `blur(${blurValue}px)`;
+      header.style.backgroundColor = `rgba(128, 128, 128, 0.3)`;
+    } else {
+      header.style.backdropFilter = 'blur(0px)';
+      header.style.webkitBackdropFilter = 'blur(0px)';
+    }
+};
+  
+window.addEventListener("scroll", blurHeader);
+
+const navLinks = document.querySelectorAll('nav ul li a');
+
+const sections = document.querySelectorAll('section');
+
+const highlightNavbar = () => {
+  let scrollPos = window.scrollY + 50;
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+
+    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+      const currentId = section.getAttribute('id');
+
+      navLinks.forEach(link => link.classList.remove('active'));
+
+      const activeLink = document.querySelector(`nav ul li a[href="#${currentId}"]`);
+      if (activeLink) {
+        activeLink.classList.add('active');
+      }
+    }
+  });
+};
+
+window.addEventListener('scroll', highlightNavbar);
