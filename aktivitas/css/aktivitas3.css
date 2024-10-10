@@ -571,7 +571,7 @@ section.home {
          display: none;
      }
  }
- 
+
  /* Navigation for mobile devices */
 @media screen and (max-width: 1023px) {
   .nav__menu {
