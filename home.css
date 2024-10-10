@@ -58,14 +58,14 @@ section.home {
 }
 
 .video-background {
-    position: absolute; /* Posisi absolute untuk memenuhi seluruh section */
-    top: 50%; /* Tempatkan di tengah vertikal */
-    left: 50%; /* Tempatkan di tengah horizontal */
-    width: 100%; /* Lebar video 100% */
-    height: 100%; /* Tinggi video 100% */
-    object-fit: cover; /* Pastikan video menutupi seluruh area */
-    transform: translate(-50%, -50%); /* Pusatkan video */
-    z-index: -1; /* Tempatkan video di belakang konten */
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    transform: translate(-50%, -50%); 
+    z-index: -1; 
 }
 
 .home .home-box {
@@ -94,6 +94,7 @@ section.home {
     padding: 0 4rem;
     z-index: 100;
     position: fixed;
+    right: 4.8px;
     /* top: 0; */
 }
 
@@ -251,6 +252,35 @@ nav ul li a.active {
 .home .home-box .content .search button:hover {
     background: #02636e;
 }
+
+.recommendations {
+    position: absolute;
+    top: 466.5px; 
+    width: 43%;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: none; 
+    color: #000;
+}
+
+.recommendations li {
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid #f1f1f1;
+    cursor: pointer;
+}
+
+.recommendations li:hover {
+    background-color: #f1f1f1;
+}
+
+.recommendations li:last-child {
+    border-bottom: none;
+}
+
 
 .home .home-box .content h5, .home .home-box .content h1, .home .home-box .content p, .home .home-box .content .search {
     transform: translate(0, 100px);
@@ -770,6 +800,7 @@ footer .footer .copyright a {
 
     .home .home-box nav {
         padding: 0 1rem;
+        right: 2.3px;
     }
 
     .home .home-box nav .menu ul {
