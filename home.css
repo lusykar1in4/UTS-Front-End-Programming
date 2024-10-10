@@ -98,8 +98,8 @@ section.home {
 }
 
 nav ul li a.active {
-    border-bottom: 2px solid #ffffff; /* Garis bawah berwarna putih */
-    color: #ffffff; /* Warna teks putih */
+    border-bottom: 3px solid #02636e;
+    color: #ffffff;
 }
 
 .home .home-box nav .logo {
