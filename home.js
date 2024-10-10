@@ -108,7 +108,7 @@ galleryAnimation(".featured .gallery", [".featured .gallery .box2",".featured .g
 
 galleryAnimation(".gem .voices", [".gem .voices .box1",".gem .voices .box2",".gem .voices .box3",".gem .voices .box4",".gem .voices .box5",".gem .voices .box6"])
 
-
+// BLUR HEADER
 const blurHeader = () => {
     const header = document.getElementById("header");
     const scrollValue = window.scrollY;
@@ -126,6 +126,7 @@ const blurHeader = () => {
   
 window.addEventListener("scroll", blurHeader);
 
+// GARIS BAWAH PADA NAVBAR
 const navLinks = document.querySelectorAll('nav ul li a');
 
 const sections = document.querySelectorAll('section');
@@ -151,3 +152,21 @@ const highlightNavbar = () => {
 };
 
 window.addEventListener('scroll', highlightNavbar);
+
+// EFEK SCROLL
+const Links = document.querySelectorAll('nav ul li a');
+
+Links.forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href');
+    const targetSection = document.querySelector(targetId);
+
+    targetSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});
+

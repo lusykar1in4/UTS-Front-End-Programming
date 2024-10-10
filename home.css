@@ -260,7 +260,7 @@ nav ul li a.active {
 /* destination section starts here  */
 .destinations {
     width: 100%;
-    padding-top: 4rem;
+    padding-top: 6rem;
     padding-bottom: 4rem;
 }
 
@@ -356,6 +356,11 @@ nav ul li a.active {
 
 /* featured section starts here  */
 
+.featured {
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+}
+
 .featured .container-box {
     width: 100%;
     display: flex;
@@ -376,6 +381,7 @@ nav ul li a.active {
     line-height: 1.7;
     color: #666;
     margin-bottom: 1rem;
+    margin-top: 1.7rem;
 }
 
 .featured .container-box .content a {
@@ -389,11 +395,6 @@ nav ul li a.active {
 
 .featured .container-box .content a:hover i {
     margin-left: .1rem;
-}
-
-.featured {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
 }
 
 .featured .gallery .box .content {
