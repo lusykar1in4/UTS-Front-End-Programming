@@ -80,4 +80,26 @@ const initSlider = (type) => {
   runAutoPlay = setTimeout(() => {
     next.click(); // Menggunakan elemen tunggal
   }, 8000);
-};
+}
+  
+
+/* FUNGSI KOLOM KE-N */
+let tabs = document.querySelector(".tabs");
+let tabHeader = tabs.querySelector(".tab-header");
+let tabBody = tabs.querySelector(".tab-body"); // Perbaikan selector
+let tabIndicator = tabs.querySelector(".tab-indicator");
+let tabHeaderNodes = tabs.querySelectorAll(".tab-header > div");
+let tabBodyNodes = tabs.querySelectorAll(".tab-body > div"); // Perbaikan selector
+
+for (let i = 0; i < tabHeaderNodes.length; i++) {
+    tabHeaderNodes[i].addEventListener("click", function() {
+        tabHeader.querySelector(".active").classList.remove("active");
+        tabHeaderNodes[i].classList.add("active");
+        tabBody.querySelector(".active").classList.remove("active"); // Perbaikan remove class
+        tabBodyNodes[i].classList.add("active");
+
+        // Perbaikan interpolasi string pada style.left
+        tabIndicator.style.left = `calc(${i * 20}% + 5px)`;
+    });
+}
+
